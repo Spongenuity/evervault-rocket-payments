@@ -23,7 +23,6 @@ def create_app():
             response = requests.post(
                 RELAY_URL,
                 json=payment_data,
-                headers={"Evervault-Decrypt": "true"}
             )
 
             if response.status_code == 200:
